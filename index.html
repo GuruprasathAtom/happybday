@@ -19,6 +19,7 @@
             audio.play();
         }
     </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
     <div id="main">
@@ -43,6 +44,10 @@
                 <span id="clock">577 days 0 hours 0 minutes 0 seconds</span> <!-- Change to "6940 days..." if needed -->
             </div>
             <canvas id="canvas" width="1100" height="680"></canvas>
+            <button onclick="playAudio()" style="position: fixed; top: 10px; left: 10px; z-index: 1000;">
+  ▶️ Play Music
+</button>
+
         </div>
     </div>
 
@@ -55,8 +60,8 @@
             return false;
         }
 
-        var width = canvas.width();
-        var height = canvas.height();        
+        var width = $(window).width();
+        var height = $(window).height();      
         canvas.attr("width", width);
         canvas.attr("height", height);
 
